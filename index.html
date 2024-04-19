@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Jacquard 24", system-ui;
+    }
+
+    h1 {
+      font-size: 50px;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Lerning JavaScript</h1>
+
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <script>
+      // Generate a random number between 1 and 10
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+      // Initialize variables
+      let numberOfGuesses = 0;
+      let guess;
+
+      // Function to prompt user for input and provide feedback
+      function guessNumber() {
+        guess = parseInt(prompt(`${randomNumber} Guess the number between 1 and 10:`));
+
+        // Check if the input is a valid number
+        if (isNaN(guess)) {
+          alert("Please enter a valid number.");
+          guessNumber();
+        } else {
+          // Increment the number of guesses
+          numberOfGuesses++;
+        //   guess = randomNumber
+
+          // Check if the guess is correct
+          if (guess === randomNumber) {
+            alert(
+              `Congratulations! You guessed the number ${guess} correctly in ${numberOfGuesses} guesses.`
+            );
+          } else if (guess < randomNumber) {
+            alert(`Try again! The number is Moto.`);
+            guessNumber();
+          } else {
+            alert(`Try again! The number is Nano.`);
+            guessNumber();
+          }
+        }
+      }
+
+      // Start the game by calling the guessNumber function
+      guessNumber();
+    </script> -->
+
+  <!-- <script>
+    // Function to generate computer's choice randomly
+    function generateComputerChoice() {
+      const obj = ['snake', 'water', 'gun'];
+      const choices = obj;
+      const randomIndex = Math.floor(Math.random() * choices.length);
+      return choices[randomIndex];
+    }
+
+    // Function to determine the winner
+    function determineWinner(userChoice, computerChoice) {
+      if (userChoice === computerChoice) {
+        return "It's a tie!";
+      } else if ( (userChoice === 'snake' && computerChoice === 'water') || (userChoice === 'water' && computerChoice === 'gun') || (userChoice === 'gun' && computerChoice === 'snake')) {
+        return 'You win!';
+      } else {
+        return 'Computer wins!';
+      }
+    }
+
+    // Function to play the game
+    function playGame() {
+      let userChoice = prompt("Enter your choice: Snake, Water, or Gun").toLowerCase();
+
+      // Validate user input
+      if (userChoice !== 'snake' && userChoice !== 'water' && userChoice !== 'gun') {
+        alert("Invalid choice! Please enter Snake, Water, or Gun.");
+        playGame();
+        return;
+      }
+
+      let computerChoice = generateComputerChoice().toLowerCase();
+      let result = determineWinner(userChoice, computerChoice);
+
+      alert(`You chose: ${userChoice}\nComputer chose: ${computerChoice}\n${result}`);
+    }
+
+    // Loop to play the game 5 times
+    for (let i = 0; i < 5; i++) {
+      playGame();
+    }
+
+  </script> -->
+</body>
+
+</html>
